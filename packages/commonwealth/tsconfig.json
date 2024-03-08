@@ -1,5 +1,6 @@
 {
   "extends": "../../tsconfig.json",
+  // "esm": true,
   "compilerOptions": {
     "jsx": "react",
     "skipLibCheck": true,
@@ -7,11 +8,16 @@
     "rootDir": ".",
     "outDir": "build",
     "baseUrl": ".",
+    "module": "ESNext",
+    "esModuleInterop": true,
     "paths": {
       "@hicommonwealth/*": ["../../libs/*/src"],
       "*": ["./*", "shared/*", "client/scripts/*"]
     }
   },
+  // "ts-node": {
+  //   "esm": true
+  // },
   "include": [
     "./client",
     "./shared",

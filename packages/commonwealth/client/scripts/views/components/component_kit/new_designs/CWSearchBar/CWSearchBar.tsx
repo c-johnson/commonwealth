@@ -13,6 +13,7 @@ import { ComponentType } from '../../types';
 import { CWTag } from '../CWTag';
 import { SearchBarDropdown } from './SearchBarDropdown';
 
+import { SIWESigner } from '@canvas-js/chain-ethereum';
 import './CWSearchBar.scss';
 
 type BaseSearchBarProps = {
@@ -55,6 +56,10 @@ export const CWSearchBar: FC<SearchBarProps> = ({
   placeholder = size === 'small' ? 'Search' : 'Search Common',
   onSearchItemClick,
 }) => {
+  const signer = new SIWESigner();
+
+  console.log('signer.key = ', signer.key);
+
   const inputRef = useRef<HTMLInputElement>();
   const navigate = useCommonNavigate();
   const [showTag, setShowTag] = useState(true);

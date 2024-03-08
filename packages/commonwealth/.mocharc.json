@@ -1,0 +1,7 @@
+{
+  "extension": ["ts"],
+  "spec": ["./test/integration/api/**/*.spec.ts"],
+  "node-option": [
+		"loader=ts-node/esm"
+	]
+}

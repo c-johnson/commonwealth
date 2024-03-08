@@ -3,13 +3,23 @@ import { models, tester, UserInstance } from '@hicommonwealth/model';
 import { assert, expect } from 'chai';
 import { ServerCommunitiesController } from '../../../server/controllers/server_communities_controller';
 import { buildUser } from '../../unit/unitHelpers';
+// import { SIWESigner } from '@canvas-js/chain-ethereum';
 
 describe('ChainNode Tests', () => {
   beforeEach(async () => {
+    console.log('running tests...');
     await tester.seedDb();
   });
 
   it('Creates new ChainNode when', async () => {
+    // const canvas = await import('@canvas-js/interfaces');
+
+    // console.log(' some function - ', canvas.serializeMessage)
+
+    // const signer = new SIWESigner();
+
+    // console.log('signer.key = ', signer.key);
+
     const controller = new ServerCommunitiesController(models, null);
     const user: UserInstance = buildUser({
       models,

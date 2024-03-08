@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "paths": {
+    "@hicommonwealth/*": ["../../libs/*/src"],
+    "*": ["./*", "shared/*", "client/scripts/*"]
+  }
+}
